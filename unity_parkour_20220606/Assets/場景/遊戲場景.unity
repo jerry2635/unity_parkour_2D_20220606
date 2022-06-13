@@ -3298,7 +3298,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7785016, y: 1}
+    m_SensorSize: {x: 2.265873, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3315,7 +3315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615653601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.41, y: -1.4999995, z: -10}
+  m_LocalPosition: {x: -44.41, y: -1.5799997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3635,7 +3635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041521165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.41, y: -1.4999995, z: -10}
+  m_LocalPosition: {x: -44.41, y: -1.5799997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3689,6 +3689,7 @@ GameObject:
   - component: {fileID: 1425696745}
   - component: {fileID: 1425696749}
   - component: {fileID: 1425696748}
+  - component: {fileID: 1425696750}
   m_Layer: 0
   m_Name: "\u5176\u5BE6\u6211\u662F\u86D9"
   m_TagString: Untagged
@@ -3776,7 +3777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425696744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.76, y: -2.86, z: 0}
+  m_LocalPosition: {x: -47.76, y: -2.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3796,7 +3797,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.21}
+  m_Offset: {x: 0, y: -0.16}
   m_Size: {x: 0.89, y: 1.13}
   m_Direction: 0
 --- !u!50 &1425696749
@@ -3820,6 +3821,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1425696750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425696744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca7d049da5ddf94090028cbf8f0741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedrun: 0.35
+  heightjump: 350
 --- !u!1 &1965142649
 GameObject:
   m_ObjectHideFlags: 0
