@@ -34,11 +34,24 @@ namespace Jerry
         #endregion
 
         #region 事件:程式入口
+        //喚醒事件.開始前執行一次.取得元件等等. <>泛型
+        private void Awake()
+        {
+            //ani 蛙身上的 animator
+            ani = GetComponent<Animator>();
+            rig = GetComponent<Rigidbody2D>();
+        }
+
         //開始事件:播放時.執行一次
         //初始化設定:重置基本數值設置
         private void Start()
         {
             print("hello.kitty!!");   
+        }
+        //更新事件:每秒執行60次.fps.frame per second
+        private void Update()
+        {
+            print("<color=yellow>更新事件執行中~</color>");
         }
 
         #endregion
