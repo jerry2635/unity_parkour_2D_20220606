@@ -7,6 +7,8 @@ namespace jerry
   public class staticAPI : MonoBehaviour
   {
         private int count;
+        private Vector3 a = new Vector3(1, 1, 1);
+        private Vector3 b = new Vector3(22,22,22);
 
         private void Start()
         {
@@ -27,7 +29,19 @@ namespace jerry
             count = Camera.allCamerasCount;
             print("攝影機數量:" + count+"台");
 
+            print("目前平台" + Application.platform);
+            Physics.sleepThreshold = 10;
+            print("睡眠臨界值" + Physics.sleepThreshold);
+            Time.timeScale = 0.5f;
+            print("時間大小" + Time.timeScale);
 
+            //靜態方法名稱(對應的引數)
+            print("9.999 去掉小數點四捨五入:" + Mathf.Round(9.999f));
+
+            float distance = Vector3.Distance(a, b);
+            print("<color=yellow>距離:" + distance + "</color>");
+
+            Application.OpenURL("https://unity.com/");
         }
         private void Update()//fps 60s
         {
@@ -36,7 +50,10 @@ namespace jerry
             int rangeint = Random.Range(1, 3);
             print("隨機整數1~3:" + rangeint);
             #endregion
+            //print("是否按下任意鍵" + Input.anyKeyDown);
+            //print("遊戲經過時間" + Time.timeSinceLevelLoad);
 
+            print("<color=red>是否按下空白鍵:" + Input.GetKeyDown(KeyCode.Space) + "</color>");
         }
     }
 
