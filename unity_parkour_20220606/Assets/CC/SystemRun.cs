@@ -62,6 +62,17 @@ namespace Jerry
             rig.velocity = new Vector2(speedrun,rig.velocity.y);
         }
 
+        //元件被勾選時執行一次
+        private void OnEnable()
+        {
+            
+        }
+
+        //元件被取消時執行一次
+        private void OnDisable()
+        {
+            rig.velocity = Vector3.zero;
+        }
         #endregion
 
     }

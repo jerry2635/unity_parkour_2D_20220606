@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace jerry
+namespace Jerry
 {
     /// <summary>
     /// «DÀRºAAPI
