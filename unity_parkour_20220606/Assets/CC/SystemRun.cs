@@ -34,7 +34,7 @@ namespace Jerry
         //修飾詞 傳回資料 方法名稱(參數){程式}
         private void Run()
         {
-            print("跑到不行~");
+            //print("跑到不行~");
         }
         #endregion
 

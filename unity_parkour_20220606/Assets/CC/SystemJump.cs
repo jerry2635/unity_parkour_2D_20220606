@@ -18,11 +18,16 @@ namespace Jerry
         private Color colorCheckGround = new Color(1, 0, 0.2f, 0.5f);
         [SerializeField, Header("檢查地板圖層")]
         private LayerMask layerCheckGroud;
+        [SerializeField, Header("跳躍動畫參數")]
+        private string nameJump = "不靈開關";
+        [SerializeField, Header("跳躍音效")]
+        private AudioClip soundJump;
 
         private Animator ani;//控制器縮寫定義
         private Rigidbody2D rig;//剛體縮寫定義
         private bool clickJump;//跳躍判定
         private bool isGround;//地面判定
+        private AudioSource aud; //新增音樂片段AUD
         #endregion
 
         #region 事件
@@ -45,6 +50,7 @@ namespace Jerry
         {
             ani = GetComponent<Animator>();
             rig = GetComponent<Rigidbody2D>();
+            aud = GetComponent<AudioSource>();
         }
 
         //input 建議在 update呼叫
@@ -58,6 +64,7 @@ namespace Jerry
         {
             JumpForce();
             CheckGround();
+            UpdateAnimator();
         }
         #endregion
 
@@ -71,6 +78,7 @@ namespace Jerry
             {
                 //print("everybody Jump!!");
                 clickJump = true;
+                aud.PlayOneShot(soundJump, 1.0f);
             }
             
         }
@@ -79,18 +87,22 @@ namespace Jerry
         {
             if(clickJump && isGround)
             {
-                rig.AddForce(new Vector2(0, heightJump));
                 clickJump = false;
+                rig.AddForce(new Vector2(0, heightJump));
+               
                 
             }
             //else if (Input.GetKeyUp(KeyCode.Space))
             //{
-            //   clickJump = false;
+            // clickJump = true;
             //}
         }
-        #endregion
+       
+        private void UpdateAnimator()
+        {
+            ani.SetBool(nameJump, !isGround); // ! 相反運作程式
+        }
         
-        #region
         ///檢查是否碰到地板
         private void CheckGround()
         {
